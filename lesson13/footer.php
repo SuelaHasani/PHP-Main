@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+     <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>
