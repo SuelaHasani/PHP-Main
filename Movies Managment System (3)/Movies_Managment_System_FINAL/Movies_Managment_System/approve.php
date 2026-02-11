@@ -12,6 +12,7 @@
 	$prep->execute();
 
 	header("Location: list_movies.php");
+
  ?>
  
 

@@ -15,8 +15,13 @@
    $selectUser->execute();
 
    $user_data = $selectUser->fetch();
-	
 
+
+   if($_SESSION ['is_admin']) {
+     return true;
+   }else{
+     return false;
+   }
  ?>
 
  <!DOCTYPE html>
