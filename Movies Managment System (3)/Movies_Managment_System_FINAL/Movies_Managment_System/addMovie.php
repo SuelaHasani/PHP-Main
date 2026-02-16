@@ -30,9 +30,5 @@
 		header("Location: movies.php");
 
 
-	}
-
-
-
-
+}
 ?>
