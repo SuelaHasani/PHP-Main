@@ -12,7 +12,7 @@
 		$book_image = $_POST['book_image'];
 	
 
-		$sql = "INSERT INTO movies(book_name, book_desc, book_quality, book_rating, book_image) VALUES (:book_name, :book_desc, :book_quality, :book_rating, :book_image)";
+		$sql = "INSERT INTO biblioteka(book_name, book_desc, book_quality, book_rating, book_image) VALUES (:book_name, :book_desc, :book_quality, :book_rating, :book_image)";
 
 		$insertMovie = $conn->prepare($sql);
 			
