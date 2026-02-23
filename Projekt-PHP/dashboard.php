@@ -127,10 +127,9 @@
 
                <tr>
                 <td><?php echo $user_data['id']; ?></td>
-                <td><?php echo $user_data['titulli']; ?></td>
-                <td><?php echo $user_data['autori']; ?></td>
-                <td><?php echo $user_data['viti']; ?></td>
-                <td><?php echo $user_data['sasia']; ?></td>
+                <td><?php echo $user_data['emri']; ?></td>
+                <td><?php echo $user_data['username']; ?></td>
+                <td><?php echo $user_data['email']; ?></td>
                 <td><a href="editBiblioteka.php?id=<?= $user_data['id'];?>">Update</a></td>
                 <td><a href="deleteBiblioteka.php?id=<?= $user_data['id'];?>">Delete</a></td>
               </tr>

@@ -15,11 +15,3 @@ try {
 }
 
  ?>
-
-
-<!-- id titulli autori viti sasia  per Biblioteka  
-hp.2LIdhja me dtbaz(db.php)  
-hp.3Shtimi librit(create.php)
- hp4Shfaqja(index.php) librave
-  hp5delete 
-  hp6.update -->

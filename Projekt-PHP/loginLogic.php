@@ -10,7 +10,7 @@ if(isset($_POST['submit'])) {
     if(empty($username) || empty($password)) {
         echo "Please fill in all fields";
     }else{
-        $sql ="SELECT id, titulli, autori, viti, sasia FROM biblioteka WHERE useranme=:username";
+        $sql ="SELECT id, emri, username, email, password, is_admin FROM biblioteka WHERE username=:username";
 
         $selectBooks = $conn->prepare($sql);
         $selectBooks->bindParam(":username", $username);
@@ -21,13 +21,13 @@ if(isset($_POST['submit'])) {
 				echo "The user does not exist";
 			}else{
                 if(password_verify($password, $data['password'])) {
-                    $SESSION['id'] = $data['id'];
-                    $SESSION['titulli'] = $data['titulli'];
-                    $SESSION['autori'] = $data['autori'];
-                    $SESSION['viti'] = $data['viti'];
-                    $SESSION['sasia'] = $data['sasia'];
+                    $_SESSION['id'] = $data['id'];
+                    $_SESSION['emri'] = $data['emri'];
+                    $_SESSION['username'] = $data['username'];
+                    $_SESSION['email'] = $data['email'];
+                    $_SESSION['is_admin'] = $data['is_admin'];
 
-                    header('Location :dashboard.php')
+                    header('Location :dashboard.php');
                 }
                 else{
                     echo "The password is not valid";
