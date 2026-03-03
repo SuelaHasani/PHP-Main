@@ -15,8 +15,10 @@ if(isset($_POST['submit'])) {
     if(empty($emri) || empty($username) || empty($email) || empty($password) || empty($confirm_password))
 		{
 			echo "You have not filled in all the fields.";
+		}else if($tempPass !== $tempConfirm){
+			echo "Passwords do not match.";
 		}else{
-            $sql = "INSERT INTO biblioteka(emri,username,email,password, confirm_password) VALUES (:emri, :username, :email, :password, :confirm_password)";
+            $sql = "INSERT INTO biblioteka(emri,username,email,password) VALUES (:emri, :username, :email, :password)";
 
             $insertSql = $conn->prepare($sql);
 
@@ -24,7 +26,6 @@ if(isset($_POST['submit'])) {
             $insertSql->bindParam(':username', $username);
             $insertSql->bindParam(':email', $email);
             $insertSql->bindParam(':password', $password);
-            $insertSql->bindParam(':confirm_password', $confirm_password);
 
             $insertSql->execute();
 

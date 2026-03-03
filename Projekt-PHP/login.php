@@ -75,7 +75,7 @@
       </label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit" name="submit">Sign in</button>
-	<p>Already have an account:<a href="index.php" >Sign up</a> </p>
+	<p>Don't have an account? <a href="index.php" >Sign up</a> </p>
   </form>
 </main>
 </body>

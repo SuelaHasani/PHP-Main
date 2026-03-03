@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 
 include_once('db.php');
@@ -27,7 +27,7 @@ if(isset($_POST['submit'])) {
                     $_SESSION['email'] = $data['email'];
                     $_SESSION['is_admin'] = $data['is_admin'];
 
-                    header('Location :dashboard.php');
+                    header('Location: dashboard.php');
                 }
                 else{
                     echo "The password is not valid";
