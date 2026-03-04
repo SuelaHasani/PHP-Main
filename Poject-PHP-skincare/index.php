@@ -4,7 +4,7 @@ session_start();
 
 $pdo = new PDO('mysql:host=localhost;dbname=skincare_store', 'root', '');
 
-// Fetch all products
+
 $products = $pdo->query("SELECT * FROM products")->fetchAll(PDO::FETCH_ASSOC);
 
 // Handle cart operations
@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         foreach ($products as $product) {
             $_SESSION['cart'][$product['id']] = 1; // Add one of each product
         }
-        // Redirect or show a message
+
         header("Location: cart.php");
         exit;
     }

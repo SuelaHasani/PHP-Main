@@ -6,7 +6,7 @@ $dbname = 'skincare_store'; // emri i databazës që ke krijuar
 $username = 'root';
 $password = ''; // zakonisht bosh në XAMPP
 
-// Krijo lidhjen
+
 try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

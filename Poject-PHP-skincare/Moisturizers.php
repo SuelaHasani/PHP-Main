@@ -3,7 +3,7 @@
 require_once 'config.php';
 session_start();
 
-// Lidhja me databazën
+
 $pdo = new PDO('mysql:host=localhost;dbname=skincare_store', 'root', '');
 
 // Merr produktet nga databaza (nëse ke tabelën 'products')
